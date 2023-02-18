@@ -601,9 +601,10 @@ progress {
 
 .img-fluid {
   max-width: 10rem;
-  object-fit: cover;
   height: auto;
-  margin-bottom: 1rem;
+      display: block;
+    margin-left: auto;
+    margin-right: auto; 
   
 }
 .img-fluid2 {
@@ -685,6 +686,7 @@ progress {
   margin-top: calc(-1 * var(--bs-gutter-y));
   margin-right: calc(8 * var(--bs-gutter-x));
   margin-left: calc(8 * var(--bs-gutter-x));
+  
 }
 .row > * {
   flex-shrink: 0;
@@ -2138,9 +2140,35 @@ progress {
 }
 
 @media (max-width: 575.98px) {
+
   .table-responsive-sm {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+  .row {
+    --bs-gutter-x: 0rem;
+    --bs-gutter-y: 0rem;
+    display: flex;
+  }
+  
+  .img-fluid {
+    width: 5rem ;
+    height: 5rem ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+   }
+
+  .portfolio-caption {
+    text-align: center;
+  }
+
+  .img-fluid2 {
+    width: 0 ;
+    height: 0 ;
+  }
+  #welcome {
+    font-size: 1.5rem;
   }
 }
 @media (max-width: 767.98px) {
@@ -11496,6 +11524,7 @@ header.masthead .masthead-heading {
   padding: 1.5rem;
   text-align: center;
   background-color: #fff;
+  
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {
   font-size: 1.5rem;
@@ -11634,7 +11663,6 @@ header.masthead .masthead-heading {
   margin-bottom: 0;
 }
 .timeline .timeline-heading h4, .timeline .timeline-heading .h4 {
-  padding-top: 2.5rem;
   margin-top: 0;
   color: inherit;
 }
